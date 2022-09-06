@@ -1,6 +1,9 @@
+
 $bg-dark : #000000;
 $bg-1 : #F5F5F5;
 $bg-btn : #F8B653;
+$bg-span : #DEDDDC;
+
 
 /*text color*/
 $text-1 : #F6F6F6;
@@ -28,6 +31,14 @@ $c-hover: #000000;
         background: $bg-hover;
         color: $c-hover;
     }
+}
+
+
+@mixin span($fw,$lh,$bg,$br) {
+    font-weight: $fw;
+    line-height: $lh;
+    background: $bg;
+    border-radius: $br;
 }
 
 * {
@@ -93,7 +104,6 @@ header {
                 opacity: 75%;
                 color: $text-2;
                 position: relative;
-
                 &::before {
                     content: "";
                     width: 100%;
@@ -157,6 +167,7 @@ header {
 
 .product {
 
+    margin-bottom: 100px;
     .container {
 
         .title {
@@ -196,15 +207,48 @@ header {
                         padding: 0;
                         border: none;
                         background: #F8F8F8;
+                        display: flex;
                         a {
+                            text-decoration: none;
                             width: 50%;
                             @include button(20px,600 ,24px ,$text-1 ,$bg-btn ,10px 30px ,none ,5px ,$bg-btn,$c-hover)
                         }
                         span {
-                            
+                            width: 50%;
+                            text-align: center;
+                            @include span(600,50px,$bg-span,5px)
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 620px){
+    .carousel {
+        .thumbnail{}
+        .detail{
+            position: relative;
+            top: 0;
+            left: -120px;
+            a {
+                font-size: small;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 420px){
+    .carousel {
+        .thumbnail{}
+        .detail{
+            position: relative;
+            top: 0;
+            left: -320px;
+            a {
+                font-size: small;
             }
         }
     }

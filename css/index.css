@@ -82,8 +82,7 @@ header .container .login nav a img {
   background-image: url(../img/image\ 6.png);
   background-size: cover;
   background-position: center right;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 500px;
   display: flex;
   justify-content: space-around;
@@ -123,6 +122,9 @@ header .container .login nav a img {
   color: #000000;
 }
 
+.product {
+  margin-bottom: 100px;
+}
 .product .container .title {
   text-align: center;
   margin-top: 50px;
@@ -158,8 +160,10 @@ header .container .login nav a img {
   padding: 0;
   border: none;
   background: #F8F8F8;
+  display: flex;
 }
 .product .container .main .row .card .card-footer a {
+  text-decoration: none;
   width: 50%;
   font-size: 20px;
   font-weight: 600;
@@ -174,4 +178,33 @@ header .container .login nav a img {
 .product .container .main .row .card .card-footer a:hover {
   background: #F8B653;
   color: #000000;
+}
+.product .container .main .row .card .card-footer span {
+  width: 50%;
+  text-align: center;
+  font-weight: 600;
+  line-height: 50px;
+  background: #DEDDDC;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 620px) {
+  .carousel .detail {
+    position: relative;
+    top: 0;
+    left: -120px;
+  }
+  .carousel .detail a {
+    font-size: small;
+  }
+}
+@media screen and (max-width: 420px) {
+  .carousel .detail {
+    position: relative;
+    top: 0;
+    left: -320px;
+  }
+  .carousel .detail a {
+    font-size: small;
+  }
 }
